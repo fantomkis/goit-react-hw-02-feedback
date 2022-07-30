@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import Feedback from './Feedback/Feedback';
+
 import Section from './Section/Section';
 import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import Statistics from './Statistics/Statistics';
@@ -57,16 +57,10 @@ class App extends Component {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          fontSize: 40,
+          fontSize: 20,
           color: '#010101',
         }}
       >
-        <Feedback
-          good={good}
-          neutral={neutral}
-          bad={bad}
-          onLeaveFeedback={this.onLeaveFeedback}
-        />
         <Section title={'Please leave feedback'}>
           <FeedbackOptions
             onLeaveFeedback={this.onLeaveFeedback}
