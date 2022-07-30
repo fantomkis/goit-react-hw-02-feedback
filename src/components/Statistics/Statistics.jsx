@@ -42,9 +42,9 @@ Statistics.propTypes = {
   good: PropTypes.number,
   neutral: PropTypes.number,
   bad: PropTypes.number,
-  total: PropTypes.func,
+  total: PropTypes.number,
 
-  positivePercentage: PropTypes.func,
+  positivePercentage: PropTypes.string,
 };
 
 export default Statistics;

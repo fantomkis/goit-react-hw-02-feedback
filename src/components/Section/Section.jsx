@@ -8,7 +8,7 @@ function Section({ title, children }) {
   );
 }
 Section.ropTypes = {
-  title: PropTypes.func,
+  title: PropTypes.string,
   children: PropTypes.array,
 };
 
