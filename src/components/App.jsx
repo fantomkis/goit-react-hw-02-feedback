@@ -30,26 +30,26 @@ class App extends Component {
 
     return `${prcent}%`;
   };
-
+  options = [
+    {
+      name: 'good',
+      type: 'button',
+      value: 'Good',
+    },
+    {
+      name: 'neutral',
+      type: 'button',
+      value: 'Neutral',
+    },
+    {
+      name: 'bad',
+      type: 'button',
+      value: 'Bad',
+    },
+  ];
   render() {
     const { good, neutral, bad } = this.state;
-    const options = [
-      {
-        name: 'good',
-        type: 'button',
-        value: 'Good',
-      },
-      {
-        name: 'neutral',
-        type: 'button',
-        value: 'Neutral',
-      },
-      {
-        name: 'bad',
-        type: 'button',
-        value: 'Bad',
-      },
-    ];
+
     return (
       <div
         style={{
@@ -64,7 +64,7 @@ class App extends Component {
         <Section title={'Please leave feedback'}>
           <FeedbackOptions
             onLeaveFeedback={this.onLeaveFeedback}
-            options={options}
+            options={this.options}
           />
           {this.sumTotal() > 0 ? (
             <Statistics
